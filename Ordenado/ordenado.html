@@ -1,0 +1,43 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenando valores</title>
+    <script src="ordenado.js"></script>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Ordenando Valores</h1>
+        <label for="valor">Digite um valor: </label>
+        <div class="button_container">
+            <input type="number" id="valor" onkeydown="handleKeyDown(event)">
+            <button class="button" onclick="add()">Adicionar</button>
+        </div>
+
+
+
+
+        <label for="algoritmo">Selecione uma função: </label><br>
+        <select id="algoritmo">
+            <option value="bubbleSort" selected>Bubble Sort</option>
+            <option value="selectionSort">Selection Sort</option>
+            <option value="quickSort">Quick Sort</option>
+        </select><br><br>
+
+
+        <div id="button_container">
+            <button class="button" onclick="ordenar()">Ordenar</button>
+            <button class="button" onclick="misturar()">Misturar</button>
+        </div>
+        <ul id="valores"></ul> 
+        
+        
+
+
+    </div>
+    <button class="button bt_voltar" onclick="window.location.href='/Usuario/index.html'">Voltar</button>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+:root {
+    --cor-fundo:#650351;
+    --cor-texto-principal: black;
+    --cor-borda:#e8fbfb;
+    --cor-botao-hover: #e8fbfb;
+    --fonte-principal: 'arial', sans-serif;
+
+
+
+    --fonte-principal: arial;
+    --cor-fundo: #f997ed;
+    --cor-fundo-header: #E8DDCB;
+    --cor-texto-principal: black;
+    --cor-subtitulo: #666666;
+    --cor-button: #c22991;
+    --cor-button-texto: #ffffff;
+    --cor-button-hover: #650351;
+}
+
+body {
+    background: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+}
+
+select {
+    font-family: var(--fonte-principal);
+    font-size: 15px;
+    height: 30px;
+    line-height: 50px;  
+}
+
+option {
+    background: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-principal);
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 150px;
+    height: 30px;
+}  
+  
+
+.button:hover {
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-fundo);
+}
+.bt-voltar {
+    display: block;
+    margin: 20px auto 0;
+}
+#button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#button-container button {
+    margin: 0 10px;
+}
+
+.button {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    border: 2px solid var(--cor-borda);
+    font-family: var(--fonte-principal);
+    display: inline-block;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 5px auto;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+}
+   

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários de Teste</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container bg-warning">
+    <h1 class="central_text">Usuários de teste através da interface REST.</h1>
+    <p class="central_text">Os usuários utilizados neste exemplo são obtidos através da API de testes.<a href="https://reqres.in/" target="_blank">reqres.in</a>
+    </p>
+    <div id="usuarios_api" class="container-fluid">
+        <div class="row d-flex flex-wrap justify-content-center">
+            <div v-for="(user, index) in users" :key="index" class="col-md-3 p-2 m-3">
+                <div class="cartao">
+                    <img :src="avatar_user_api" class="card-img-sup" alt="Avatar do usuário">
+                    <div class="card-body">
+                        <h5 class="card-titulo">{user_nomecompleto} {{user_nomecompleto}}</h5>
+                        <p class="card-texto">{{user_email}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#usuarios_api',
+            data() {
+                return {
+                    users: []
+                };
+            },
+            mounted() {
+                this.loadUsers();
+            },
+            methods: {
+                loadUsers() {
+                    fetch('https://reqres.in/api/users?page=1&per_page=10')
+                        .then(response => response.json())
+                        .then(date => {
+                            this.users = date_for_date;
+                        })
+                        .catch(error => {
+                            console.error('Failed: Erro no carregamento "Dados dos Usuários":', error);
+                        });
+                }
+            }
+        });
+    </script>
+
+<button class="button bt-voltar" onclick="window.location.href='/Usuario/index.html'">Voltar</button>
+
+    
+
+</body>
+</html>

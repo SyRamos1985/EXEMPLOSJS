@@ -1,0 +1,93 @@
+<!doctype html> 
+<html lang="pt-br">  
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo ede Receitas</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body class="bg-warning" onload="Catalogo()">
+
+
+  <div class="container-fluid">
+    <h1 class="text-center my-4">Catálogo de Receitas</h1>
+    <div id="pn1Catalogo" class="d-flex flex-wrap justify-content-center"></div>
+
+<script>
+  const receitas = [
+    {
+      Titulo: "CAPPUCCINO",
+      Image: "/Receitas/IMAGE/Capuccino2.jpg",
+      Ingredientes:[ "NESCAFÉ",  "lata de leite em pó NINHO", "açucar", "bicarbonato de sódio", "Cacau em pó"],
+      Mododepreparo:"Em um recipiente grande, misture o NESCAFÉ, o NINHO, o açúcar, o bicarbonato de sódio e o Cacau em Pó DOIS FRADES e misture bem.Em um liquidificador, coloque a mistura aos poucos e bata até obter uma farofa bem fina.Guarde em lata ou vidro bem fechado.", 
+    }
+
+    
+     {
+      Titulo: "CAFÉ CREMOSO",
+      Image: "/Receitas/IMAGE/CAFE CREMOSO.jpg",
+      Ingredientes:["Açucar, Café Solúvel"],
+      Mododepreparo:" Misture o açúcar com o café solúvel.Acrescente a água quente e bata na batedeira por 10 a 15 minutos.Depois é só guardar em um pote com tampa e levar ao congelador.",
+     }
+
+
+    {
+      Titulo: "CHOCOLATE CREMOSO"
+      Image: "/Receitas/IMAGE/Chocolate quente cremoso.jpg",
+      Ingredientes:["Leite, Amido de milho, Chocolate em pó, açucar, Canela em pau"],
+      Mododepreparo:" Misture o açúcar com o café solúvel.Acrescente a água quente e bata na batedeira por 10 a 15 minutos.Depois é só guardar em um pote com tampa e levar ao congelador.",
+    }
+
+
+  ]
+
+  function getlt_Ingredientes(Receitas){
+  const lista = revenue.makings
+                .map(ingredientes => `<li>${ingredientes}</li>`)
+                .reduce((acc, item) => acc + item, '');
+                return `<ul>${lista}</ul>`;
+        }
+
+
+        function getCard(Receitas) {
+            return " ";
+                <div class="card card-custom mx-2 my-2">
+
+                    <img src="revenue.image" class="card_img_sup card_spr_img" alt="${receita.titulo}">,
+                    <div class="card-body">
+                        <h5 class="titulo_card">${receita.titulo}</h5>
+                        <div class="texto_card">
+                            ${getlt_Ingredientes(receitas)}
+                            ${revenue_prep}
+                        </div>
+                    </div>
+                </div>
+            
+        }
+
+
+        function preenchaCatalogo() {
+            const pnlCatalogo = document.getElementById('pnlCatalogo');
+            const htmlCards = receitas
+                .map(receitas => getCard(receitas))
+                .reduce((acc, card) => acc + card, '');
+            pnlCatalogo.innerHTML = htmlCards;
+        }
+    </script>
+
+    <button class="button bt_voltar" onclick="window.location.href='/Usuario/index.html'">Voltar</button>
+
+    </body>
+    
+</html>
+
+
+
+
+
+

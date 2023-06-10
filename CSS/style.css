@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
+
+:root {
+    --cor-texto-principal:black;
+    --cor-fundo: #ce30af ; 
+    --cor-fundo-header:#f8c0c0 ;
+    --cor-subtitulo: #666666;
+    --cor-botão: #c22991;
+    --cor-botão-texto: #f8c0c0;
+    --cor-botao-hover: #650351; 
+    --fonte-principal: 'Source Sans Pro','sans-serif';
+}
+
+    
+
+label {
+        font-family: var(--fonte-principal);
+        color: var(--cor-texto-principal);
+    }
+
+
+
+input {
+    background: var(--cor-botão);
+    border: 2px solid var(--cor-borda);
+    color: var(--cor-botão-texto);
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    width: 150px;
+    height: 33px;       
+}
+
+select {
+    font-size: 15px;
+    height: 30px;  
+}
+
+
+body {
+         background: var(--cor-fundo);
+         font-family: var(--fonte-principal);
+         flex-direction: column;
+         align-items: center;
+         align-items: center;
+         justify-content: center;
+         justify-content: center;
+         display: flex;
+         flex-direction: column;
+         margin: 20px;
+         padding: 10px;   
+    }
+    
+h1 {
+        text-align: center;
+        color: var(--cor-texto-principal);
+        font-family: var(--fonte-principal);
+        font-size: 28px;
+    }
+    
+    .button {
+        background-color: var(--cor-botão);
+        color: var(--cor-botão-texto);
+        vertical-align: middle;
+        border: 2px solid var(--cor-borda);
+        display: inline-block;
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 5px auto;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 18px;
+        width: 100px;
+        height: 40px;
+        margin-left: 10px;
+    }
+    .button:hover {
+        background-color: var(--cor-botao-hover);
+        color: var(--cor-fundo);
+    }
+
+
+    #button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+
+    #button_container button {
+        margin: 0 10px;
+    }
+
+    .bt_voltar {
+        display: block;
+        margin: 20px auto 0;
+    }
+
+
+
+    .card-custom {
+        width: 250px;    
+    }
+
+
+    .card_spr_img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+     
+
+option {
+        background: var(--cor-fundo-header);
+        display: inline-block;
+        color: var(--cor-texto-principal);
+        border: 1px solid var(--cor-borda);
+        vertical-align: middle;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+}
